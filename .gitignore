@@ -1,32 +1,23 @@
-# Prerequisites
-*.d
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
+*.opensdf
+*.sdf
 *.obj
-
-# Precompiled Headers
-*.gch
+*.log
+*.tlog
+*.pdb
+*.ilk
+*.ipch
+*.idb
+*.ipch
+Project/ipch/chargerdebuger-50854523/chargerdebuger-a6c56d86.ipch
+*.idb
+*.suo
 *.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+*.res
+*.idb
+*.pch
+*.idb
+Project/x64/Debug/LOG/log2018_11_10.txt
+Project/x64/Debug/LOG/log2018_11_09.txt
+Project/x64/Debug/LOG/log2018_11_12.txt
+Project/Release/chargerDebuger.exe

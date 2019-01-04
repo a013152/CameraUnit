@@ -56,24 +56,27 @@ int _tmain(int argc, _TCHAR* argv[])
 // 			KillTimer(NULL, dwTimerId);
 // 			break;
 // 		}
+	// ::sleep(10);
 // 	}
 
 	//test thread
 	ThreadPool threadPool(2, 10);
-#if 0
+#if 1
+	//::Sleep(2000);
  	size_t i = 0;
- 	for ( i = 0; i < 30; i++)
+ 	for ( i = 0; i < 31; i++)
 	{
-		threadPool.QueueTaskItem(Task::Task1, (PVOID)i, TaskCallback::TaskCallback1);
-	}
-	threadPool.QueueTaskItem(Task::Task1, (PVOID)i, TaskCallback::TaskCallback1, TRUE);
+		threadPool.QueueTaskItem(Task::Task1, (PVOID)i, TaskCallback::TaskCallback1); 
+		
+		::Sleep(10);
+	} 
 #endif
 	//¼ÓÔØÌ×½Ó×Ö¿â
 	WSADATA wsaData;
 	int iRet = 0;
 	BOOL bRet = FALSE;
 
-#if 1
+#if 0
 	iRet = WSAStartup(MAKEWORD(2, 2), &wsaData);
 	if (iRet != 0)
 	{

@@ -27,8 +27,7 @@ ThreadPool::ThreadPool(size_t minNumOfThread, size_t maxNumOfThread)
 ThreadPool::~ThreadPool()
 {
 	SetEvent(stopEvent);
-	PostQueuedCompletionStatus(completionPort, 0, (DWORD)EXIT, NULL);
-
+	PostQueuedCompletionStatus(completionPort, 0, (DWORD)EXIT, NULL); 
 	CloseHandle(stopEvent);
 }
 
@@ -37,8 +36,9 @@ BOOL ThreadPool::QueueTaskItem(TaskFun task, PVOID param, TaskCallbackFun taskCb
 	waitTaskLock.Lock();
 	WaitTask *waitTask = new WaitTask(task, param, taskCb, longFun);
 	waitTaskList.push_back(waitTask);
-	waitTaskLock.UnLock();
+	waitTaskLock.UnLock(); 
 	PostQueuedCompletionStatus(completionPort, 0, (DWORD)GET_TASK, NULL);
+	//::Sleep(1);
 	return TRUE;
 }
 

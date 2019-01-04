@@ -9,10 +9,10 @@ public:
 	static int parMsg(PVOID pMsgStr);
 	static int Task1(PVOID p)
 	{ 
-		printf("%d\n", (int)p);
+		printf("Task::%d\n", (int)p);
 		Sleep(100);
 
-		return 0;
+		return (int)p;
 	}
 };
 
@@ -29,6 +29,6 @@ class TaskCallback
 public:
 	static void TaskCallback1(int result)
 	{
-		//printf("   %d\n", result);
+		printf("TaskCB::   %d\n", result);
 	}
 };

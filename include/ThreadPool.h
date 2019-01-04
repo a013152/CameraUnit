@@ -99,6 +99,7 @@ private:
 			{
 				threadPool->GetTaskExcute();
 			}
+			::Sleep(1);
 		}
 		return 0;
 	}

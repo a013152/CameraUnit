@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #include "cJSON.h"
 #include "parJSON.h"
-
 
 msgFieldDef regFieldArrary[F_NUM_R] = {
 	{ F_SERIAL_R, "serialNum" },
